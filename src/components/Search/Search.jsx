@@ -2,11 +2,13 @@ import styles from "./Search.module.css";
 import SearchIcon from "../../assets/Search.svg?react";
 import { useState } from "react";
 import { useWeather } from "../../context/WeatherContext";
+import { useNavigate } from "react-router-dom";
 
 export const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const { fetchWeatherData } = useWeather();
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -16,12 +18,12 @@ export const Search = () => {
             setErrorMessage('Please enter a location.');
             return;
         }
-
         try {
             const data = await fetchWeatherData(searchTerm);
             if (data === null) {
                 throw new Error('Location not found'); 
             }    
+            navigate(`/`);
         } catch (error) {
             console.error("Error fetching weather data:", error);
             setErrorMessage("Location not found. Please check the spelling or try a different location.");
