@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import styles from "./SecondaryInfo.module.css";
 import { useWeather } from "../../context/WeatherContext";
 import { useEffect, useState } from "react";
-import { weatherAPI } from "../../api/weatherApi";
+import { weatherAPI } from "../../api/weatherAPI";
 
 export const SecondaryInfo = () => {
     const { currentWeather, currentLocation, fetchWeatherData } = useWeather();

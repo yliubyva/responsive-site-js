@@ -5,7 +5,7 @@ import { Search } from "../components/Search";
 import { Navigation } from "../components/Navigation";
 import { useMemo } from "react";
 import { useWeather } from "../context/WeatherContext";
-import { BackgroundContainer } from "../components/BackgroundContainer/BackgroundContainer";
+import { BackgroundContainer } from "../components/BackgroundContainer";
 
 export const Root = () => {
     const { currentWeather } = useWeather();

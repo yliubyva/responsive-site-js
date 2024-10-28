@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { weatherAPI } from "../../api/weatherApi";
+import { weatherAPI } from "../../api/weatherAPI";
 import { BackgroundContainer } from "../BackgroundContainer/BackgroundContainer";
 import { InfoCard } from "../InfoCard/InfoCard";
 import { useParams } from "react-router-dom";

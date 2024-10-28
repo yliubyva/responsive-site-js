@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState, useContext } from "react";
-import { weatherAPI } from "../api/weatherApi";
+import { weatherAPI } from "../api/weatherAPI";
 import PropTypes from "prop-types";
 
 const WeatherContext = createContext();
