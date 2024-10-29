@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 80px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.date {
+  position: relative;
+}
+
+.colon {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    justify-content: flex-start;
+    gap: 25px;
+    max-width: none;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+  .date::after {
+    content: "|";
+    position: absolute;
+    top: 0;
+    right: -15px;
+  }
+}

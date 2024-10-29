@@ -1,0 +1,67 @@
+.container {
+    margin: 0 auto;
+    max-width: 550px;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.container,
+.description,
+.tempRange {
+    display: flex;
+}
+
+.container,
+.description {
+    align-items: center;
+}
+
+.currentInfo {
+    text-align: center;
+}
+
+.temp {
+    font-size: 110px;
+}
+
+.degree {
+    font-size: 16px;
+    position: relative;
+    top: -70px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.tempRange {
+    width: 150px;
+    justify-content: space-between;
+}
+
+.range {
+    padding: 5px;
+}
+
+.card {
+    justify-self: stretch;
+}
+
+@media screen and (min-width: 500px) {
+
+    .container {
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .cardGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
